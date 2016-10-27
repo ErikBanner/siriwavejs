@@ -1,10 +1,10 @@
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JFrame;
+import java.awt.AWTException;
+import java.awt.Point;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.awt.geom.*;
-import java.awt.image.BufferedImage;
-import java.util.*;
+import java.awt.Robot;
+import java.util.Random;
 
 
 public class Main {

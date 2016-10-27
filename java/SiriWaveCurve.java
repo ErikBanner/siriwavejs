@@ -1,21 +1,8 @@
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.awt.geom.*;
-import java.awt.image.BufferedImage;
-import java.util.*;
+import java.awt.Polygon;
 
 public class SiriWaveCurve extends Polygon {
-	// CacheObject[] globAttenuationEquationCache;
 	SiriWave controller;
 	Definition definition;
-
-	// public class CacheObject {
-	// 	double val;
-
-	// 	CacheObject(double val) { this.val = val; }
-	// }
 
 	SiriWaveCurve(SiriWave controller, Definition definition) {
 		super();
@@ -26,10 +13,6 @@ public class SiriWaveCurve extends Polygon {
 	}
 
 	public double globAttenuationEquation(double x) {
-		// int intX = (int) Math.round(x);
-		// if (globAttenuationEquationCache[intX] == null) 
-		// 	globAttenuationEquationCache[intX] = new CacheObject(Math.pow(4 / (4 + Math.pow(x, 4)), 4));
-		// return globAttenuationEquationCache[intX].val;
 		return Math.pow(4 / (4 + Math.pow(x, 4)), 4);
 	}
 

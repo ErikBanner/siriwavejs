@@ -1,11 +1,10 @@
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.awt.geom.*;
-import java.awt.image.BufferedImage;
-import java.util.*;
-
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+import java.awt.BasicStroke;
+import javax.swing.JPanel;
+import java.awt.Color;
 
 public class SiriWave extends JPanel {
 	double phase = 0;

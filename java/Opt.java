@@ -1,10 +1,4 @@
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.awt.geom.*;
-import java.awt.image.BufferedImage;
-import java.util.*;
+import java.awt.Color;
 
 public class Opt {
 	double width;
