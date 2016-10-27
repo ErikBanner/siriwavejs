@@ -56,7 +56,8 @@ public class Main {
                 if (runCount % 70000000 == 0) {
                     // System.out.println("Ran ticker " + runCount + " times");
                     Random random = new Random();
-                    double randomScale = 1.1 + random.nextInt(6);
+                    double randomScale = random.nextDouble();
+                    view.setAmplitude(randomScale);
                     view.repaint();
                 }
             }

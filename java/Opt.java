@@ -17,11 +17,11 @@ public class Opt {
 	double speedInterpolationSpeed = 0.005;
 	double amplitudeInterpolationSpeed = 0.05;
 	Definition[] definitions = new Definition[]{
-		new Definition(-2, 1, 0.1),
-		new Definition(-6, 1, 0.2),
-		new Definition(4, 1, 0.4),
-		new Definition(2, 1, 0.6),
-		new Definition(1, 1.5f, 1)
+		new Definition(-2, 1.0f, 0.1f),
+		new Definition(-6, 1.0f, 0.2f),
+		new Definition(4, 1.0f, 0.4f),
+		new Definition(2, 1.0f, 0.6f),
+		new Definition(1, 1.5f, 1.0f)
 	};
 
 	Opt(double width, 

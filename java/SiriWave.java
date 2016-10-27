@@ -43,13 +43,13 @@ public class SiriWave extends JPanel {
 		addSiriWaveCurves();
 	}
 
-	public void addSiriWaveCurves() {
+	private void addSiriWaveCurves() {
 		for (int i=0; i<curves.length; i++) {
 			curves[i] = new SiriWaveCurve(this, definitions[i]);
 		}
 	}
 
-	public void interpolate(String str) {
+	private void interpolate(String str) {
 		double increment = str.equals("speed") ? speedInterpolationSpeed : amplitudeInterpolationSpeed;
 		double speedOrAmplitude = str.equals("speed") ? this.speed : this.amplitude;
 		
@@ -79,10 +79,22 @@ public class SiriWave extends JPanel {
 	    interpolate("speed");
 	    interpolate("amplitude");
 
+	    addSiriWaveCurves();
 	    for (int i=0; i<this.curves.length; i++) {
+	    	BasicStroke stroke = new BasicStroke(definitions[i].lineWidth, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND);
+	    	g2.setStroke(stroke);
+	    	g2.setColor(new Color(0.0f, 0.0f, 0.0f, definitions[i].opacity));	    	
 	    	g2.drawPolyline(curves[i].xpoints, curves[i].ypoints, curves[i].npoints);
 	    }
 
 	    this.phase = (this.phase + Math.PI * this.speed) % (2 * Math.PI);
+	}
+
+	public void setSpeed(double v) {
+		this.cache.interpolation.put("speed", v);
+	}
+
+	public void setAmplitude(double v) {
+		this.cache.interpolation.put("amplitude", Math.max(Math.min(v, 1), 0));
 	}
 }
