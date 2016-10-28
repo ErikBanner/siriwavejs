@@ -5,7 +5,7 @@ public class Opt {
 	double height;
 	double ratio = 1;
 	double amplitude = 1;
-	double speed = 0.3;
+	double speed = 0.2;
 	int frequency = 6;
 	Color color = Color.BLACK;
 	double speedInterpolationSpeed = 0.005;
