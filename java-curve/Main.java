@@ -11,7 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
         final JFrame frame = new JFrame("Siri Wave");
-        final Opt opt = new Opt(600, 600);
+        final Opt opt = new Opt(500, 400);
         final SiriWave siriWave = new SiriWave(opt);
         frame.getContentPane().add(siriWave);
         final Ticker t = new Ticker(siriWave);
@@ -53,11 +53,7 @@ public class Main {
             int runCount = 0;
             while (update) {
                 runCount++;
-                if (runCount % 70000000 == 0) {
-                    // System.out.println("Ran ticker " + runCount + " times");
-                    Random random = new Random();
-                    double randomScale = random.nextDouble();
-                    view.setAmplitude(randomScale);
+                if (runCount % 15000000 == 0) {
                     view.repaint();
                 }
             }
